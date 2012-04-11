@@ -18,7 +18,7 @@ class HeadwayExampleBlock extends HeadwayBlockAPI {
 	 * 
 	 * This method will be executed at the WordPress 'wp' hook
 	 **/ 
-	function enqueue_action($block_id, $layout) {
+	function enqueue_action($block_id) {
 								
 		$block = HeadwayBlocksData::get_block($block_id);
 		
@@ -33,7 +33,7 @@ class HeadwayExampleBlock extends HeadwayBlockAPI {
 	 * 
 	 * The method will execute for every single block on every single layout.
 	 **/
-	function init_action($block_id, $layout) {
+	function init_action($block_id) {
 		
 		return;
 		
@@ -43,7 +43,14 @@ class HeadwayExampleBlock extends HeadwayBlockAPI {
 	/**
 	 * Use this to insert dynamic JS into the page needed.  This is perfect for initializing instances of jQuery Cycle, jQuery Tabs, etc.
 	 **/
-	function js_content($block_id, $layout) {
+	function dynamic_js($block_id) {
+		
+		return;
+		
+	}
+	
+	
+	function dynamic_css($block_id) {
 		
 		return;
 		
