@@ -50,6 +50,9 @@ class HeadwayExampleBlock extends HeadwayBlockAPI {
 	}
 	
 	
+	/**
+	 * This function will insert dynamic CSS into real CSS files thus negating the need for nasty inline CSS (whether in a <style> element or the style attribute)
+	 **/
 	function dynamic_css($block_id) {
 		
 		return;
