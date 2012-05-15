@@ -9,6 +9,7 @@ Author URI: http://www.headwaythemes.com
 License: GNU GPL v2
 */
 
+define('EXAMPLE_BLOCK_VERSION', '1.0');
 
 /**
  * Everything is ran at the after_setup_theme action to insure that all of Headway's classes and functions are loaded.
@@ -30,5 +31,20 @@ function example_block_register() {
 	return headway_register_block('HeadwayExampleBlock', plugins_url(false, __FILE__));
 
 }
+
+
+/**
+ * If you plan on adding your block to Headway Extend, then this will be the code that will enable auto-updates for the block/plugin.
+ **/
+add_action('init', 'example_block_extend_updater');
+function example_block_extend_updater() {
+
+	$updater = new HeadwayUpdaterAPI(array(
+		'id' => 'example-block',
+		'name' => 'Example Block',
+		'path' => plugin_basename(__FILE__),
+		'type' => 'block',
+		'current_version' => EXAMPLE_BLOCK_VERSION
+	));
 
 }
