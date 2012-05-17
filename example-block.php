@@ -39,10 +39,13 @@ function example_block_register() {
 add_action('init', 'example_block_extend_updater');
 function example_block_extend_updater() {
 
+	if ( !class_exists('HeadwayUpdaterAPI') )
+		return;
+
 	$updater = new HeadwayUpdaterAPI(array(
 		'id' => 'example-block',
-		'name' => 'Example Block',
 		'path' => plugin_basename(__FILE__),
+		'name' => 'Example Block',
 		'type' => 'block',
 		'current_version' => EXAMPLE_BLOCK_VERSION
 	));
