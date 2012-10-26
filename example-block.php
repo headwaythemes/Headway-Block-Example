@@ -43,7 +43,7 @@ function example_block_extend_updater() {
 		return;
 
 	$updater = new HeadwayUpdaterAPI(array(
-		'id' => 'example-block',
+		'slug' => 'example-block',
 		'path' => plugin_basename(__FILE__),
 		'name' => 'Example Block',
 		'type' => 'block',
