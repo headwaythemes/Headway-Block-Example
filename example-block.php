@@ -2,7 +2,7 @@
 /*
 Plugin Name: Headway Example Block
 Plugin URI: http://www.headwaythemes.com
-Description: Example block for Headway 3.0.
+Description: Example block for Headway 3
 Version: 1.0
 Author: Headway Themes
 Author URI: http://www.headwaythemes.com
