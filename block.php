@@ -84,7 +84,7 @@ class HeadwayExampleBlock extends HeadwayBlockAPI {
 				'Selected' => '.example-element-selector.selected', 
 				'Hover' => '.example-element-selector:hover', 
 				'Clicked' => '.example-element:active'
-			),
+			)
 		));
 		
 	}
